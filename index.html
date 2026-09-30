@@ -100,6 +100,92 @@
             </table>
           </h2>
         </aside>
+        <section id="comprar">
+          <h2>finalizar compra</h2>
+          <form action="">
+            <fieldset>
+              <legend>Datos de envio</legend>
+              <p>
+                <label for="nombre">Nombre Completo</label><br/>
+                <input type="text" id="nombre" name="nombre" required minlength="3" autocomplete="name">
+              </p>
+              <p>
+                <label for="apellido">Apellido Completo</label><br/>
+                <input type="text" id="apellido" name="apellido" required minlength="3" autocomplete="apellido">
+              </p>
+              <p>
+                <label for="email">Email</label><br/>
+                <input type="text" id="email" name="email" required minlength="3" autocomplete="email">
+              </p>
+              <p>
+                <label for="direccion">Direccion</label><br/>
+                <input type="text" id="direccion" name="direccion" required minlength="3" autocomplete="direccion">
+              </p>
+              <p>
+                <label for="Ciudad">Ciudad</label><br/>
+                <input type="text" id="Ciudad" name="Ciudad" list="ciudades" minlength="3" autocomplete="Ciudad">
+                <datalist id="ciudades">
+                  <option value="Lima"></option>
+                  <option value="Bogota"></option>
+                  <option value="Quito"></option>
+                  <option value="La Paz"></option>
+                  <option value="Santiago"></option>
+                </datalist>
+              </p>
+              <p>
+                <label for="pais">Pais</label>
+                <select name="pais" id="pais" required>
+                  <option value="">-Elige un pais</option>
+                  <option value="pe">Peru</option>
+                  <option value="cl">Colombia</option>
+                  <option value="ec">Ecuador</option>
+                  <option value="arg">Argentina</option>
+                  <option value="ch">Chile</option>
+                </select>
+              </p>
+              <p>
+                <label for="telefono">Telefono</label><br>
+                <input type="tel" id="telefono" pattern="[0-9]{7,}" title="solo numeros, al menos 7 digitos" autocomplete="tel">
+              </p>
+              <p>
+                <label for="fecha">Fecha de entrega deseada</label><br>
+                <input type="date" id="fecha" name="fecha">
+              </p>
+              <p>
+                <label for="cantidad">Cantidad de unidades</label><br>
+                <input type="number" id="cantidad" name="cantidad" min="1" max="10" step="1" value="1" required>
+              </p>
+              <p>
+                <label for="notas">Notas para el repartidor</label><br>
+                <textarea name="notas" id="notas" rows="5" maxlength="200"></textarea>
+                
+              </p>
+            </fieldset>
+            <fieldset>
+              <legend>Metodo de pago</legend>
+              <p>
+                <input type="radio" id="pago-tarjeta" name="pago" value="tarjeta" required>
+                <label for="pago-tarjeta">Tarjeta</label>
+              </p>
+              <p>
+                <input type="radio" id="pago-paypal" name="pago" value="paypal" >
+                <label for="pago-paypal">Paypal</label>
+              </p>
+              <p>
+                <input type="radio" id="pago-contra" name="pago" value="contraentrega" >
+                <label for="pago-contra">Contra entrega</label>
+              </p>
+            </fieldset>
+            <button type="submit">Confirmar compra</button>
+
+          </form>
+
+        </section>
     </main>
+    <footer>
+      <p>&copy: 2026 Tarea-Tecsup</p>
+      <p>Datos e imagenes de <a href="https://dummyjson.com" target="_blank" rel="noopener" >DummyJson</a> </p>
+      <address>Contacto <a href="mailto:asdf@gmail.com">asdfa@gmail.com</a></address>
+    </footer>
   </body>
 </html>
