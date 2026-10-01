@@ -31,7 +31,11 @@ caption{
     font-weight: 600;
     text-align: left;
     margin-bottom: 0.5rem;
+/*! mover el titulo "Tarifa por zona" de la tabla abajo  */
+    caption-side: bottom;
 }
+
+
 
 th, td{
     border: 1px solid #d2d2d7;
@@ -42,6 +46,18 @@ th, td{
 th{
     background-color: #e5e5e5;
 }
+
+/*! costos a la derecha */
+td:last-child{
+    text-align: right;
+}
+
+/*! fila de lima en negrita */
+tbody tr:first-child{
+    font-weight: bold;
+}
+
+
 
 body{
     font-family: 'Courier New', Courier, monospace;
@@ -60,7 +76,8 @@ h2::after{
     display: block;
     width: 3rem;
     height: 3px;
-    background-color: #0066cc;
+    /* !cambiar el color de acento - tarea F*/
+    background-color: #ff6600;
     margin-top: 0.25rem;
 }
 h3{font-size: 1.125rem;}
@@ -88,6 +105,17 @@ article img{
     height: auto;
 }
 
+/*! darle sombra a las tarjetas */
+article{
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+/*! levantar las tarjetas cuando pasas el mouse */
+article:hover{
+    transform: translate(+100px, 0px);
+}
+
 a{color: rgb(115, 115, 211);}
 strong{color: hsl(146, 85%, 26%);}
 button{
@@ -102,7 +130,7 @@ button{
 /* CLASE */
 .destacado{background-color: rgba(153, 216, 231, 0.199);}
 /* ID */
-#compra{
+.compra{
     background-color: #a88beb;
     border-radius: 12px;
     padding: 1.5rem;
@@ -130,8 +158,8 @@ legend{
 }
 
 
-#compra input,
 #compra select,
+#compra input,
 #compra textarea{
     width: 100%;
     padding: 0.5rem 0.75rem;
@@ -145,6 +173,23 @@ legend{
     width: auto;
     margin-top: 0;
 }
+
+/* poner los label uno debajo del otro */
+#compra label{
+    display: block;
+}
+
+/*! los radio y checkbox siguen en linea */
+#compra input[type="radio"] + label,
+#compra input[type="checkbox"] + label{
+    display: inline;
+}
+
+/*! dejar cambiar el textarea solo para arriba y abajo */
+#compra textarea{
+    resize: vertical;
+}
+
 #compra [type="radio"] + label,
 #compra [type="checkbox"] + label {
     margin-left: 0.35rem;
@@ -152,7 +197,7 @@ legend{
 #compra input:user-invalid,
 #compra select:user-invalid,
 #compra textarea:user-invalid{
-    border-color: #c0392b;
+    border-color: #2b2dc0;
 }
 
 
@@ -169,8 +214,8 @@ nav a:hover{
 button:hover{
     filter: brightness(1.9);
 }
-tbody tr:nth-child(even) {background-color: coral;}
-tbody tr:hover{ background-color: violet;}
+tbody tr:nth-child(even) {background-color: rgba(165, 165, 165, 0.678);}
+tbody tr:hover{ background-color: rgba(181, 201, 204, 0.651);}
 
 a:focus-visible,
 button:focus-visible,
@@ -194,7 +239,8 @@ textarea,option:focus-visible{
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    border: 1px solid #0066cc;
+    /*! cambiar el color de acento - tarea F*/
+    border: 1px solid #ff6600;
     border-radius: 999px;
     padding: 0.15rem 0.6rem;
     margin-bottom: 0.5rem;
@@ -225,4 +271,17 @@ footer address {
 }
 footer address{
     font-style: normal;
+}
+
+/*! probar la especificidad de los h3 */
+h3{
+    color: red;
+}
+
+.titulo{
+    color: blue;
+}
+
+#catalogo h3{
+    color: rgb(160, 13, 228);
 }
