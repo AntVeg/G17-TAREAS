@@ -1,0 +1,228 @@
+/* TIPO */
+header{
+    background-color: #fdfdfdc2;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+header h1{
+    margin: 0;
+}
+
+aside{
+    background-color: #FFF;
+    border: 1px solid #28dae0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+aside ol{
+    padding-left: 1.5 rem;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption{
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+th, td{
+    border: 1px solid #d2d2d7;
+    padding: 0.5rem 0.75rem;
+    text-align:left;
+}
+
+th{
+    background-color: #e5e5e5;
+}
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(61, 63, 226, 0.849);
+    background-color: #e0e0e0b9;
+    box-sizing: border-box;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+h1{color: rgb(53, 171, 218); font-size: 2rem;}
+h2{font-size: 1.5rem;}
+h2::after{
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 3px;
+    background-color: #0066cc;
+    margin-top: 0.25rem;
+}
+h3{font-size: 1.125rem;}
+
+h1,h2,h3 {line-height: 1.2;}
+figcaption{
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: rgb(111, 115, 110);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+article{
+    text-align: center;
+    background-color: rgba(20, 5, 224, 0.89);
+    border: 1px solid #0999c5c0;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    max-width: 360px;
+}
+
+article img{
+    max-width: 100%;
+    height: auto;
+}
+
+a{color: rgb(115, 115, 211);}
+strong{color: hsl(146, 85%, 26%);}
+button{
+    background-color: rgba(89, 231, 184, 0.658);
+    color: bisque;
+    cursor: pointer;
+    border: 0;
+    border-radius: 999px;
+    padding: 0.6em 1.2em;
+}
+
+/* CLASE */
+.destacado{background-color: rgba(153, 216, 231, 0.199);}
+/* ID */
+#compra{
+    background-color: #a88beb;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+fieldset{
+    border: 1px solid #d2d2d7;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+fieldset p{
+    margin: 0.75rem 0;
+}
+
+fieldset p:last-child{
+    margin-bottom: 0;
+}
+
+
+legend{
+    font-weight: 600;
+    padding: 0 0.4rem;
+}
+
+
+#compra input,
+#compra select,
+#compra textarea{
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d2d2d7;
+    border-radius: 8px;
+    margin-top: 0.25rem;
+}
+
+#compra input[type="radio"],
+#compra input[type="checkbox"]{
+    width: auto;
+    margin-top: 0;
+}
+#compra [type="radio"] + label,
+#compra [type="checkbox"] + label {
+    margin-left: 0.35rem;
+}
+#compra input:user-invalid,
+#compra select:user-invalid,
+#compra textarea:user-invalid{
+    border-color: #c0392b;
+}
+
+
+/* DESCENDIENTE E HIJO DIRECTO */
+nav > ul {list-style: none; padding: 0; margin: 0.5rem 0 0;}
+nav li {display: inline-block;}
+nav li:not(:last-child){margin-right: 1.25rem;}
+nav a {text-decoration: none; font-weight: 600;}
+/* ATRIBUTO */
+button[type=submit]{background-color: hsl(146, 85%, 26%);}
+nav a:hover{
+    text-decoration: underline;
+}
+button:hover{
+    filter: brightness(1.9);
+}
+tbody tr:nth-child(even) {background-color: coral;}
+tbody tr:hover{ background-color: violet;}
+
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible,
+textarea,option:focus-visible{
+    outline: 3px solid #0adf0a;
+    outline-offset: 2px;
+}
+
+::placeholder{
+    color: #28e041;
+    font-style: italic;
+}
+
+.destacado::before {
+    content: "Destacado";
+    display: inline-block;
+    color: #28dae0;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border: 1px solid #0066cc;
+    border-radius: 999px;
+    padding: 0.15rem 0.6rem;
+    margin-bottom: 0.5rem;
+}
+
+a[target="_blank"]::after{
+    content: "->";
+}
+
+/* Herencia */
+
+input, select, textarea, button{
+    font: inherit;
+}
+
+footer{
+    margin-top: 2rem;
+    padding: 1.5rem 0;
+    border-top: 1px solid #d2d2d7;
+    text-align: center;
+    color: #6e6e6e;
+    font-size: 0.876rem;
+}
+
+footer p,
+footer address {
+    margin: 0.25rem 0;
+}
+footer address{
+    font-style: normal;
+}
